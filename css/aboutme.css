@@ -1,0 +1,30 @@
+.mybody{
+    width: 1200px;
+    height: 520px;
+    margin: 0 auto;
+    background-color: white;
+}
+.nav li:nth-child(8) {
+    color: black;
+}
+.nav li:nth-child(4) {
+    color: yellow;
+}
+.mybody p img{
+    /* margin-left: 500px; */
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+.mybody p{
+    position: relative;
+    top: 20px;
+    /* margin-top: 20px; */
+    margin-left: 560px;
+}
+.mybody span{
+    text-align: center;
+    margin-top: 25px;
+    font-size: 18px;
+    display: block;
+}

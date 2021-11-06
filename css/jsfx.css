@@ -1,0 +1,7 @@
+
+.nav li:nth-child(7) {
+    color: yellow;
+}
+.nav li:nth-child(8) {
+    color: black;
+}

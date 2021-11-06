@@ -1,0 +1,72 @@
+.nav li:nth-child(8) {
+    color: black;
+}
+.nav li:nth-child(5) {
+    color: yellow;
+}
+.boke{
+    width: 1200px;
+    height: 540px;
+    background-color: white;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    /* top:-8px; */
+
+}
+.boke ul{
+    
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.boke ul li{
+    /* display: ; */
+    background: rgb(27, 221, 60);
+    padding:20px 20px;
+    list-style: none;
+    float: left;
+    margin: 0 15px 15px 0;
+    text-align: center;
+}
+.boke ul li:nth-child(1){
+    position: relative;
+    /* margin-top: 8px; */
+}
+.boke ul li a{
+    font-size: 18px;
+    color: #FFF;
+    text-decoration: none;
+    margin: 0 15px 15px 0;
+}
+
+.boke ul li:nth-child(2){
+    background: rgb(201 96 163);
+}
+.boke ul li:nth-child(3){
+    background: rgb(44 30 162);
+}
+.boke ul li:nth-child(4){
+    background: rgb(123 97 35);
+}
+.boke ul li:nth-child(5){
+    background: rgb(139 147 230);
+}
+.boke ul li:nth-child(6){
+    background: rgb(199 103 213);
+}
+.boke ul li:nth-child(7){
+    background: rgb(201 132 36);
+}
+.boke ul li:nth-child(8){
+    background: rgb(177 11 137);
+}
+.boke ul li:nth-child(9){
+    background: rgb(254 118 252);
+}
+.boke ul li:nth-child(10){
+    background: rgb(112 34 136);
+}
+.boke ul li:nth-child(11){
+    background: rgb(34 136 98);
+}

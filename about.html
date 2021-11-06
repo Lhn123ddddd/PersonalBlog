@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>个人博客</title>
+<link rel="shortcut icon" href="./images/king.jpg" type="image/x-icon" />
+<meta name="keywords" content="个人博客,特效,前端,3d元素">
+<meta name="description" content="卢先森的个人博客,前端培训中,以后会更加完善">
+<link rel="stylesheet" href="./css/com_header.css">
+<link rel="stylesheet" href="./css/index.css">
+<link rel="stylesheet" href="style.css">
+<script src="./js/jquery-1.12.4.min.js"></script>
+<script async type="text/javascript" src="./js/background.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+<link rel="stylesheet" href="./css/com_footer.css"> 
+<link rel="stylesheet" href="./css/aboutme.css">
+<style>
+    body, html {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+    }
+    #background {
+        z-index: -1;
+        position: fixed;
+        top: 0;
+        left: 0;			
+    }             
+</style>
+</head>
+<body>
+<canvas id="background"></canvas>
+<!-- 顶部 -->
+<div class="top">
+    <div class="top-a">
+      <div class="top-main">
+        <img src="./images/king.jpg" alt="">  
+       <p class="name">
+           卢先森个人博客
+       </p>
+       <ul class="nav">
+           <li class="icon-search"></li>
+           <li>个人博客模板</li>
+           <li>留言</li>
+           <li>关于我</li>
+           <li>博客推荐</li>
+           <li>程序人生</li>
+           <li>技术分享</li>
+           <li>博客首页</li>
+       </ul>
+       </div>
+    </div>
+    <div class="bar">
+        <input type="text" class="search" placeholder="请输入关键字"><button class="btn">搜索</button>
+    </div>
+</div>
+<!-- 主要区域 -->
+<div class="mybody">
+    <p>
+        <img src="./images/king.jpg" alt="">
+    </p>
+    <span>卢先森，一条咸鱼</span>
+    <span>js项目练手</span>
+    <span>仿张先森博客</span>
+    <span>熟悉博客的基本布局</span>
+    <span>后期完善个人博客</span>
+
+</div>
+<!-- 底部footer区域 -->
+<div class="footer">
+    <div class="footer-top"></div>
+    <span>商业合作请联系QQ:1586206982</span>
+    <span>需要技术支持请加vx:阿巴阿巴阿巴阿巴</span>
+    </div>       
+</div>
+<!-- 脚本区域 -->
+<script>
+    $(function(){
+        //鼠标移入变色
+        $('.nav li').mouseover(function(){
+                $(this).not('.icon-search').not('.tab').css('color','yellow')
+        })
+        $('.nav li').mouseout(function(){
+                $(this).not('.icon-search').not('.tab').css('color','')
+        })
+        // <!-- 搜索框显示 -->
+        $(".icon-search").click(function(){
+            $('.bar').slideToggle(200);
+        })
+        $('.nav li:nth-child(8)').click(function(){
+            window.location.href="index.html";
+        })
+        $('.nav li:nth-child(7)').click(function(){
+            window.location.href="jsfx.html";
+        })
+        $('.nav li:nth-child(6)').click(function(){
+            window.location.href="cxrs.html";
+        })
+        $('.nav li:nth-child(5)').click(function(){
+            window.location.href="tuijian.html";
+        })
+        $('.nav li:nth-child(4)').click(function(){
+            window.location.href="about.html";
+        })
+    })
+</script>   
+</body>
+</html>

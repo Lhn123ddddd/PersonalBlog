@@ -1,0 +1,99 @@
+/* 解决边框8px */
+*{
+    margin: 0;
+}
+.top-a{
+    width: 100%;
+    height: 60px;
+    /* background-color: #786bcb; */
+    background-image: linear-gradient(#e66465, #9198e5)
+}
+
+.top::before {
+    background: #000 linear-gradient(to left, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55);
+    content: "";
+    height: 5px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.top img{
+    width: 50px;
+    height: 50px;
+    /* line-height: 50px; */
+    float: left;
+    margin-top: 5px;
+    /* margin-left: ; */
+}
+.name{
+    font-size: 20px;
+    line-height: 60px;
+    float: left;
+    color:#fff;
+}
+.nav{
+    width: 800px;
+    height: 68px;
+    position: relative;
+    float: right;
+}
+.nav li{
+    list-style: none;
+    line-height: 60px;
+    float: right;
+    /* width: 12.5%; */
+    margin-left: 40px;
+}
+.nav li:nth-child(7){
+    color:yellow;
+
+};
+.nav li:nth-child(1){
+    position: relative;
+    float: right;
+} 
+.nav .icon-search{
+    font-size:30px;
+    position: relative;
+    right: 0;
+    color: yellow;
+}
+/* 下拉框 */
+.bar{
+    width: 1200px;
+    height: 70px;
+    position: absolute;
+    display: none;
+    background-color:white;
+    margin: 0 160px;
+    z-index: 100;
+    box-shadow: 0 3px 10px rgb(180 200 180);   
+}
+.search{
+	width: 400px;
+	height: 38px;
+	border: 1px solid black;
+	border-radius: 5px 0px 0px 5px;
+	border-right: 0px;
+    margin-top: 15px;
+    margin-left: 300px;
+}
+.bar input:focus{
+	outline: none;
+}
+.btn{
+	width: 160px;
+	height: 40px;
+	background-color: #222;
+    color: white;
+	border-left: 0px;
+	border-radius: 0px 5px 5px 0px;
+}
+.top-main{
+    width: 1200px;
+    height: 100%;
+    /* background-color: red; */
+    margin: 0 auto;
+    background-image: linear-gradient(#e66465, #9198e5)
+}
+

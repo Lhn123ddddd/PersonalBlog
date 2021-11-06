@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>个人博客</title>
+<link rel="shortcut icon" href="./images/king.jpg" type="image/x-icon" />
+<meta name="keywords" content="个人博客,特效,前端,3d元素">
+<meta name="description" content="卢先森的个人博客,前端培训中,以后会更加完善">
+<link rel="stylesheet" href="./css/com_header.css">
+<link rel="stylesheet" href="./css/cxrs.css">
+<link rel="stylesheet" href="./css/indexc.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="./css/swiper-bundle.min.css">
+<script src="./js/swiper-bundle.min.js"></script>
+<script src="./js/jquery-1.12.4.min.js"></script>
+<script async type="text/javascript" src="./js/background.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+<link rel="stylesheet" href="./css/com_footer.css"> 
+<link rel="stylesheet" href="css/stylea.css">
+<link rel="stylesheet" href="css/comment.css">
+<style>
+    body, html {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+    }
+    #background {
+        z-index: -1;
+        position: fixed;
+        top: 0;
+        left: 0;			
+    }             
+</style>
+</head>
+<body>
+<canvas id="background"></canvas>
+<div class="top">
+    <div class="top-a">
+      <div class="top-main">
+        <img src="./images/king.jpg" alt="">  
+       <a href="index.html"><p class="name">
+           卢先森个人博客
+       </p>
+       </a>
+       <ul class="nav">
+           <li class="icon-search"></li>
+           <li>个人博客模板</li>
+           <li>留言</li>
+           <li>关于我</li>
+           <li>博客推荐</li>
+           <li>程序人生</li>
+           <li>技术分享</li>
+           <li class="tab">博客首页</li>
+       </ul>
+    </div>
+    </div>
+    <div class="bar">
+        <input type="text" class="search" placeholder="请输入关键字"><button class="btn">搜索</button>
+    </div>
+</div>
+<div class="Content">
+    <!-- 左部技术分享区域 -->
+    <div class="content-left-b">
+        <a class="cx">程序人生</a>
+        <ul>
+            <li>
+                <b>【热】</b>
+                <span>Computer和Watch</span>
+                <div class="blog">
+                    <img src="./images/b.gif" alt="">                     
+                        <p class="blog-text">Computed本质是一个具备缓存的watcher，依赖的属性发生变化就会更新视图。 适用于计算比较消耗性能的计算场景。当表达式过于复杂时，在模板中放入过多逻辑会让模板难以维护，可以将复杂的逻辑放入计算属性中处理。</p>
+                    <div class="info">
+                        <a>不吃茶的李白</a>
+                        <a>2020-11-11</a>
+                        <a class="icon-eye"></a>
+                            <a id="wo">1997</a>                           
+                        <a class="icon-heart"></a>
+                            <a id="nima">46</a>
+                        <a href="cxrs1.html" class="read">阅读文章</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <b>【热】</b>
+                <span>阿里、头条、网易等 19 家大厂面试题</span>
+                <div class="blog">
+                <img src="./images/c.gif" alt="">
+                <p class="blog-text">来自网易大佬的大厂面经,阿里: 使用过的Koa2中间件、Koa-body原理介绍自己写过的中间件、有没有涉及到Cluster、介绍Pm2、Master挂了的话Pm2怎么处理、如何和MySQL进行通信、React声明周期及自己的理解、如何配置React-Router、路由的动态加载模块、服务端渲染SSR、介绍路由的History、介绍Redux数据流的流程、Redux如何实现多个组件之间的通信，多个组件使用相同状态如何进行管理、多个组件之间如何拆分各自的State，每块小的组件有自己的状态，它们之间还有一些公共的状态需要维护，如何思考这块 适用于计算比较消耗性能的计算场景。当表达式过于复杂时，在模板中放入过多逻辑会让模板难以维护，可以将复杂的逻辑放入计算属性中处理。</p>
+                <div class="info">
+                    <a>不吃茶的李白</a>
+                    <a>2019-10-11</a>
+                    <a class="icon-eye"></a>
+                        <a id="wo">1997</a>                           
+                    <a class="icon-heart"></a>
+                        <a id="nima">46</a>
+                        <a href="cxrs1.html" class="read">阅读文章</a>
+                </div>
+                </div>
+            </li>
+            <li>
+                <b>【热】</b>
+                <span>为爱，守望一生的时光</span>
+                <div class="blog">
+                    <img src="./images/a.gif" alt="">
+                    <p class="blog-text">拾起一段葱茏的过往， 一笺心语便轻轻的流淌过岁月， 你文字的馨香， 轻易便触模到我烟火的模样。 ／ 有一种爱，是流水花香的曼妙 让掌心的记忆，写满了诗和远方 那些身手相牵的过往，珍藏着你的笑 待经年的风吹过处，是为爱低眉的时光。 适用于计算比较消耗性能的计算场景。当表达式过于复杂时，在模板中放入过多逻辑会让模板难以维护，可以将复杂的逻辑放入计算属性中处理。</p>
+                    <div class="info">
+                        <a>不吃茶的李白</a>
+                        <a>2020-11-11</a>
+                        <a class="icon-eye"></a>
+                            <a id="wo">1997</a>                           
+                        <a class="icon-heart"></a>
+                            <a id="nima">46</a>
+                            <a href="cxrs1.html" class="read">阅读文章</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <b>【热】</b>
+                <span>往昔终不在，岁月愿重来</span>
+                <div class="blog">
+                    <img src="./images/q.gif" alt="">
+                    <p class="blog-text">沉相遇__秋思落 寒风凛冽的清晨，我从朦胧的梦中醒来，我是很不愿意早早起床的，那是因为我的心都是冷的。 但寒冷依然在四季中轮回，年年岁岁，从不停歇，从不偷懒，而我，依然宿命孑然一身的守候着，亦如迁徙的候鸟，孤独的翱翔于天际，只为等待下一个季节的更替。 适用于计算比较消耗性能的计算场景。当表达式过于复杂时，在模板中放入过多逻辑会让模板难以维护，可以将复杂的逻辑放入计算属性中处理。</p>
+                    <div class="info">
+                        <a>不吃茶的李白</a>
+                        <a>2020-11-11</a>
+                        <a class="icon-eye"></a>
+                            <a id="wo">1997</a>                           
+                        <a class="icon-heart"></a>
+                            <a id="nima">46</a>
+                            <a href="cxrs1.html" class="read">阅读文章</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <b>【热】</b>
+                <span>既往不恋，当下不杂，未来不惧</span>
+                <div class="blog">
+                    <img src="./images/d.gif" alt="">
+                    <p class="blog-text">人生就像一直奋笔疾书的铅笔，开始的时候，笔锋总是很尖，但慢慢的就被磨得圆滑了。尽管，做人少不了圆滑，但凡事物极必反，倘若太过圆滑了，也不好，那就意味着差不多该挨削了。  适用于计算比较消耗性能的计算场景。当表达式过于复杂时，在模板中放入过多逻辑会让模板难以维护，可以将复杂的逻辑放入计算属性中处理。</p>
+                    <div class="info">
+                        <a>不吃茶的李白</a>
+                        <a>2020-11-11</a>
+                        <a class="icon-eye"></a>
+                            <a id="wo">1997</a>                           
+                        <a class="icon-heart"></a>
+                            <a id="nima">46</a>
+                            <a href="cxrs1.html" class="read">阅读文章</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <b>【热】</b>
+                <span>前端进阶算法1：如何分析、统计算法的执行效率和资源消耗？</span>
+                <div class="blog">
+                    <img src="./images/e.gif" alt="">
+                    <p class="blog-text">前端还要学算法？必须学，而且必须狠狠地学。现在去大厂面试，数据结构与算法已经是标配，要是不会的话，那基本与大厂无缘了。作为一名前端，虽然在平常开发中很少写算法，但当我们需要深入前端框架、开发语言、开源库时，懂算法将大大提高我们看源码的能力。例如 react 的 diff 算法、webpack 中利用 tree-shaking 优化、v8 中的调用栈、消息队列等，这些就大量使用了算法，看懂了就能更好的了解它们的性能，更高效的解决问题，进阶到更高 Level，赚更多钱。 适用于计算比较消耗性能的计算场景。当表达式过于复杂时，在模板中放入过多逻辑会让模板难以维护，可以将复杂的逻辑放入计算属性中处理。</p>
+                    <div class="info">
+                        <a>不吃茶的李白</a>
+                        <a>2020-11-11</a>
+                        <a class="icon-eye"></a>
+                            <a id="wo">1997</a>                           
+                        <a class="icon-heart"></a>
+                            <a id="nima">46</a>
+                            <a href="cxrs1.html" class="read">阅读文章</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <b>【热】</b>
+                <span>知足知福，才会长乐人生。</span>
+                <div class="blog">
+                    <img src="./images/f.gif" alt="">
+                    <p class="blog-text">老子在《道德经》中曰:上善若水，水善利万物而不争。处众人之所恶，故几于道。居善地，心善渊，与善仁，言善信，政善治，事善能，动善时。夫唯不争，故无尤。生活在滚滚红尘，总会遇到形形色色的人。我们改变不了别人，那就先改变自己，做一个上善若水，任由方圆的人，这是大气，也是智慧。知足知福，才会长乐人生。 适用于计算比较消耗性能的计算场景。当表达式过于复杂时，在模板中放入过多逻辑会让模板难以维护，可以将复杂的逻辑放入计算属性中处理。</p>
+                    <div class="info">
+                        <a>不吃茶的李白</a>
+                        <a>2020-11-11</a>
+                        <a class="icon-eye"></a>
+                            <a id="wo">1997</a>                           
+                        <a class="icon-heart"></a>
+                            <a id="nima">46</a>
+                            <a href="cxrs1.html" class="read">阅读文章</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <b>【热】</b>
+                <span>看淡了是生活，看透了是幸福</span>
+                <div class="blog">
+                    <img src="./images/leisheng7.gif" alt="">
+                    <p class="blog-text">淡看人生，笑看风云。很多事情，不是我们想要遇见，而是被遇见，甚至是强加于人；有些事情，不是看不懂，而是放不下。想通了，气就顺了，看淡了，心就轻盈了。 生活中没有什么是一成不变的，我们就是站着不动，也会被生活的残酷粘上来，往往前面没有了路，还必须选择带伤前进。 适用于计算比较消耗性能的计算场景。当表达式过于复杂时，在模板中放入过多逻辑会让模板难以维护，可以将复杂的逻辑放入计算属性中处理。</p>
+                    <div class="info">
+                        <a>不吃茶的李白</a>
+                        <a>2020-11-11</a>
+                        <a class="icon-eye"></a>
+                            <a id="wo">1997</a>                           
+                        <a class="icon-heart"></a>
+                            <a id="nima">46</a>
+                            <a href="cxrs1.html" class="read">阅读文章</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <b>【热】</b>
+                <span>2018，我们不一样</span>
+                <div class="blog">
+                    <img src="./images/leisheng9.gif" alt="">
+                    <p class="blog-text">太多太多不容易/磨平了岁月和脾气/时间转眼就过去/这身后不散的筵席/只因为我们还在/心留在原地……”回望曾经走过的路，其实好难好难，并不是想象中的一帆风顺，但不管如何，我们还要继续走下去，不能坐以待毙。 适用于计算比较消耗性能的计算场景。当表达式过于复杂时，在模板中放入过多逻辑会让模板难以维护，可以将复杂的逻辑放入计算属性中处理。</p>
+                    <div class="info">
+                        <a>不吃茶的李白</a>
+                        <a>2020-11-11</a>
+                        <a class="icon-eye"></a>
+                            <a id="wo">1997</a>                           
+                        <a class="icon-heart"></a>
+                            <a id="nima">46</a>
+                            <a href="cxrs1.html" class="read">阅读文章</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <b>【热】</b>
+                <span>往昔终不在，岁月愿重来</span>
+                <div class="blog">
+                    <img src="./images/keli.gif" alt="">
+                    <p class="blog-text">沉相遇__秋思落 寒风凛冽的清晨，我从朦胧的梦中醒来，我是很不愿意早早起床的，那是因为我的心都是冷的。 但寒冷依然在四季中轮回，年年岁岁，从不停歇，从不偷懒，而我，依然宿命孑然一身的守候着，亦如迁徙的候鸟，孤独的翱翔于天际，只为等待下一个季节的更替。 适用于计算比较消耗性能的计算场景。当表达式过于复杂时，在模板中放入过多逻辑会让模板难以维护，可以将复杂的逻辑放入计算属性中处理。</p>
+                    <div class="info">
+                        <a>不吃茶的李白</a>
+                        <a>2020-11-11</a>
+                        <a class="icon-eye"></a>
+                            <a id="wo">1997</a>                           
+                        <a class="icon-heart"></a>
+                            <a id="nima">46</a>
+                            <a href="cxrs1.html" class="read">阅读文章</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <b>【热】</b>
+                <span>往昔终不在，岁月愿重来</span>
+                <div class="blog">
+                    <img src="./images/keli.gif" alt="">
+                    <p class="blog-text">沉相遇__秋思落 寒风凛冽的清晨，我从朦胧的梦中醒来，我是很不愿意早早起床的，那是因为我的心都是冷的。 但寒冷依然在四季中轮回，年年岁岁，从不停歇，从不偷懒，而我，依然宿命孑然一身的守候着，亦如迁徙的候鸟，孤独的翱翔于天际，只为等待下一个季节的更替。 适用于计算比较消耗性能的计算场景。当表达式过于复杂时，在模板中放入过多逻辑会让模板难以维护，可以将复杂的逻辑放入计算属性中处理。</p>
+                    <div class="info">
+                        <a>不吃茶的李白</a>
+                        <a>2020-11-11</a>
+                        <a class="icon-eye"></a>
+                            <a id="wo">1997</a>                           
+                        <a class="icon-heart"></a>
+                            <a id="nima">46</a>
+                            <a href="cxrs1.html" class="read">阅读文章</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <b>【热】</b>
+                <span>往昔终不在，岁月愿重来</span>
+                <div class="blog">
+                    <img src="./images/keli.gif" alt="">
+                    <p class="blog-text">沉相遇__秋思落 寒风凛冽的清晨，我从朦胧的梦中醒来，我是很不愿意早早起床的，那是因为我的心都是冷的。 但寒冷依然在四季中轮回，年年岁岁，从不停歇，从不偷懒，而我，依然宿命孑然一身的守候着，亦如迁徙的候鸟，孤独的翱翔于天际，只为等待下一个季节的更替。 适用于计算比较消耗性能的计算场景。当表达式过于复杂时，在模板中放入过多逻辑会让模板难以维护，可以将复杂的逻辑放入计算属性中处理。</p>
+                    <div class="info">
+                        <a>不吃茶的李白</a>
+                        <a>2020-11-11</a>
+                        <a class="icon-eye"></a>
+                            <a id="wo">1997</a>                           
+                        <a class="icon-heart"></a>
+                            <a id="nima">46</a>
+                            <a href="cxrs1.html" class="read">阅读文章</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <b>【热】</b>
+                <span>往昔终不在，岁月愿重来</span>
+                <div class="blog">
+                    <img src="./images/keli.gif" alt="">
+                    <p class="blog-text">沉相遇__秋思落 寒风凛冽的清晨，我从朦胧的梦中醒来，我是很不愿意早早起床的，那是因为我的心都是冷的。 但寒冷依然在四季中轮回，年年岁岁，从不停歇，从不偷懒，而我，依然宿命孑然一身的守候着，亦如迁徙的候鸟，孤独的翱翔于天际，只为等待下一个季节的更替。 适用于计算比较消耗性能的计算场景。当表达式过于复杂时，在模板中放入过多逻辑会让模板难以维护，可以将复杂的逻辑放入计算属性中处理。</p>
+                    <div class="info">
+                        <a>不吃茶的李白</a>
+                        <a>2020-11-11</a>
+                        <a class="icon-eye"></a>
+                            <a id="wo">1997</a>                           
+                        <a class="icon-heart"></a>
+                            <a id="nima">46</a>
+                            <a href="cxrs1.html" class="read">阅读文章</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <b>【热】</b>
+                <span>往昔终不在，岁月愿重来</span>
+                <div class="blog">
+                    <img src="./images/keli.gif" alt="">
+                    <p class="blog-text">沉相遇__秋思落 寒风凛冽的清晨，我从朦胧的梦中醒来，我是很不愿意早早起床的，那是因为我的心都是冷的。 但寒冷依然在四季中轮回，年年岁岁，从不停歇，从不偷懒，而我，依然宿命孑然一身的守候着，亦如迁徙的候鸟，孤独的翱翔于天际，只为等待下一个季节的更替。 适用于计算比较消耗性能的计算场景。当表达式过于复杂时，在模板中放入过多逻辑会让模板难以维护，可以将复杂的逻辑放入计算属性中处理。</p>
+                    <div class="info">
+                        <a>不吃茶的李白</a>
+                        <a>2020-11-11</a>
+                        <a class="icon-eye"></a>
+                            <a id="wo">1997</a>                           
+                        <a class="icon-heart"></a>
+                            <a id="nima">46</a>
+                            <a href="cxrs1.html" class="read">阅读文章</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <b>【热】</b>
+                <span>往昔终不在，岁月愿重来</span>
+                <div class="blog">
+                    <img src="./images/keli.gif" alt="">
+                    <p class="blog-text">沉相遇__秋思落 寒风凛冽的清晨，我从朦胧的梦中醒来，我是很不愿意早早起床的，那是因为我的心都是冷的。 但寒冷依然在四季中轮回，年年岁岁，从不停歇，从不偷懒，而我，依然宿命孑然一身的守候着，亦如迁徙的候鸟，孤独的翱翔于天际，只为等待下一个季节的更替。 适用于计算比较消耗性能的计算场景。当表达式过于复杂时，在模板中放入过多逻辑会让模板难以维护，可以将复杂的逻辑放入计算属性中处理。</p>
+                    <div class="info">
+                        <a>不吃茶的李白</a>
+                        <a>2020-11-11</a>
+                        <a class="icon-eye"></a>
+                            <a id="wo">1997</a>                           
+                        <a class="icon-heart"></a>
+                            <a id="nima">46</a>
+                            <a href="cxrs1.html" class="read">阅读文章</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <b>【热】</b>
+                <span>往昔终不在，岁月愿重来</span>
+                <div class="blog">
+                    <img src="./images/keli.gif" alt="">
+                    <p class="blog-text">沉相遇__秋思落 寒风凛冽的清晨，我从朦胧的梦中醒来，我是很不愿意早早起床的，那是因为我的心都是冷的。 但寒冷依然在四季中轮回，年年岁岁，从不停歇，从不偷懒，而我，依然宿命孑然一身的守候着，亦如迁徙的候鸟，孤独的翱翔于天际，只为等待下一个季节的更替。 适用于计算比较消耗性能的计算场景。当表达式过于复杂时，在模板中放入过多逻辑会让模板难以维护，可以将复杂的逻辑放入计算属性中处理。</p>
+                    <div class="info">
+                        <a>不吃茶的李白</a>
+                        <a>2020-11-11</a>
+                        <a class="icon-eye"></a>
+                            <a id="wo">1997</a>                           
+                        <a class="icon-heart"></a>
+                            <a id="nima">46</a>
+                            <a href="cxrs1.html" class="read">阅读文章</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <b>【热】</b>
+                <span>往昔终不在，岁月愿重来</span>
+                <div class="blog">
+                    <img src="./images/keli.gif" alt="">
+                    <p class="blog-text">沉相遇__秋思落 寒风凛冽的清晨，我从朦胧的梦中醒来，我是很不愿意早早起床的，那是因为我的心都是冷的。 但寒冷依然在四季中轮回，年年岁岁，从不停歇，从不偷懒，而我，依然宿命孑然一身的守候着，亦如迁徙的候鸟，孤独的翱翔于天际，只为等待下一个季节的更替。 适用于计算比较消耗性能的计算场景。当表达式过于复杂时，在模板中放入过多逻辑会让模板难以维护，可以将复杂的逻辑放入计算属性中处理。</p>
+                    <div class="info">
+                        <a>不吃茶的李白</a>
+                        <a>2020-11-11</a>
+                        <a class="icon-eye"></a>
+                            <a id="wo">1997</a>                           
+                        <a class="icon-heart"></a>
+                            <a id="nima">46</a>
+                            <a href="cxrs1.html" class="read">阅读文章</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <b>【热】</b>
+                <span>往昔终不在，岁月愿重来</span>
+                <div class="blog">
+                    <img src="./images/keli.gif" alt="">
+                    <p class="blog-text">沉相遇__秋思落 寒风凛冽的清晨，我从朦胧的梦中醒来，我是很不愿意早早起床的，那是因为我的心都是冷的。 但寒冷依然在四季中轮回，年年岁岁，从不停歇，从不偷懒，而我，依然宿命孑然一身的守候着，亦如迁徙的候鸟，孤独的翱翔于天际，只为等待下一个季节的更替。 适用于计算比较消耗性能的计算场景。当表达式过于复杂时，在模板中放入过多逻辑会让模板难以维护，可以将复杂的逻辑放入计算属性中处理。</p>
+                    <div class="info">
+                        <a>不吃茶的李白</a>
+                        <a>2020-11-11</a>
+                        <a class="icon-eye"></a>
+                            <a id="wo">1997</a>                           
+                        <a class="icon-heart"></a>
+                            <a id="nima">46</a>
+                            <a href="cxrs1.html" class="read">阅读文章</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <b>【热】</b>
+                <span>往昔终不在，岁月愿重来</span>
+                <div class="blog">
+                    <img src="./images/keli.gif" alt="">
+                    <p class="blog-text">沉相遇__秋思落 寒风凛冽的清晨，我从朦胧的梦中醒来，我是很不愿意早早起床的，那是因为我的心都是冷的。 但寒冷依然在四季中轮回，年年岁岁，从不停歇，从不偷懒，而我，依然宿命孑然一身的守候着，亦如迁徙的候鸟，孤独的翱翔于天际，只为等待下一个季节的更替。 适用于计算比较消耗性能的计算场景。当表达式过于复杂时，在模板中放入过多逻辑会让模板难以维护，可以将复杂的逻辑放入计算属性中处理。</p>
+                    <div class="info">
+                        <a>不吃茶的李白</a>
+                        <a>2020-11-11</a>
+                        <a class="icon-eye"></a>
+                            <a id="wo">1997</a>                           
+                        <a class="icon-heart"></a>
+                            <a id="nima">46</a>
+                            <a href="cxrs1.html" class="read">阅读文章</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <b>【热】</b>
+                <span>往昔终不在，岁月愿重来</span>
+                <div class="blog">
+                    <img src="./images/keli.gif" alt="">
+                    <p class="blog-text">沉相遇__秋思落 寒风凛冽的清晨，我从朦胧的梦中醒来，我是很不愿意早早起床的，那是因为我的心都是冷的。 但寒冷依然在四季中轮回，年年岁岁，从不停歇，从不偷懒，而我，依然宿命孑然一身的守候着，亦如迁徙的候鸟，孤独的翱翔于天际，只为等待下一个季节的更替。 适用于计算比较消耗性能的计算场景。当表达式过于复杂时，在模板中放入过多逻辑会让模板难以维护，可以将复杂的逻辑放入计算属性中处理。</p>
+                    <div class="info">
+                        <a>不吃茶的李白</a>
+                        <a>2020-11-11</a>
+                        <a class="icon-eye"></a>
+                            <a id="wo">1997</a>                           
+                        <a class="icon-heart"></a>
+                            <a id="nima">46</a>
+                            <a href="cxrs1.html" class="read">阅读文章</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="cao">                 
+            <a class="ca">查看更多文章...</a>
+        </div>
+        
+    </div>
+    <!-- 右部点击排行区域 -->
+    <div class="content-right-a">
+        <span class="c-ph">点击排行</span>
+        <ul>
+            <li>
+                <span>1</span>
+                <span>Computed 和 Watch</span>
+            </li>
+            <li>
+                <span>2</span>
+                <span>前端进阶算法1：如何分析、统计算法的执行效率和资源消耗？</span>
+            </li>
+            <li>
+                <span>3</span>
+                <span>阿里、头条、网易等 19 家大厂面试题</span>
+            </li>
+            <li>
+                <span class="weak">4</span>
+                <span>知足知福，才会长乐人生。</span>
+            </li>
+            <li>
+                <span class="weak">5</span>
+                <span>为爱，守望一生的时光</span>
+            </li>
+            <li>
+                <span class="weak">6</span>
+                <span>往昔终不在，岁月愿重来</span>
+            </li>
+            <li>
+                <span class="weak">7</span>
+                <span>2020，我们不一样</span>
+            </li>
+            <li>
+                <span class="weak">8</span>
+                <span>春山夜，且听轻风语</span>
+            </li>
+        </ul>
+    </div>
+    <!-- 右部博客推荐 -->
+    <div class="box">
+        <div class="content-right-b">
+            <span>优秀博客</span>
+            <ul>
+                <li>
+                    <a href="#">文桑博客</a>
+                </li>
+                <li>
+                    <a href="#">钱佳乐个人博客</a>
+                </li>
+                <li>
+                    <a href="#">叶凯辉个人博客</a>
+                </li>
+                <li>
+                    <a href="https://ys.mihoyo.com/?utm_source=adbdpz&from_channel=adbdpz#/">原批网</a>
+                </li>
+                <li>
+                    <a href="https://lol.qq.com/">KDA ALLOUT</a>
+                </li>
+                <li>
+                    <a href="https://www.csdn.net/">csdn</a>
+                </li>
+                <li>
+                    <a href="https://www.jq22.com/">jquery22</a>
+                </li>
+                <li>
+                        <a href="earth.html">3d元素周期表</a>
+                    </li>
+                <li>
+                    <a href="boom.html">子弹破碎</a>
+                </li>
+                <li>
+                    <a href="https://www.githubs.cn/">github</a>
+                </li>
+                <li>
+                    <a href="https://www.zhangqinblog.com/">张先森个人博客</a>
+                </li>
+            </ul>
+        </div>
+        <!-- 右部开门特效 -->
+        <div class="wechat">
+            <div class="door">
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+        </div>
+    </div>
+<!-- 返回顶部 -->
+    <div class="back-top">
+        <img src="./images/bt.jpg" alt="">
+    </div>
+    <div class="git">
+        <a href="https://www.githubs.cn/"><img src="./images/github.jpg" alt=""></a>
+    </div>
+</div>
+
+<!-- 底部footer区域 -->
+<div class="footer">
+    <div class="footer-top"></div>
+    <span>商业合作请联系QQ:1586206982</span>
+    <span>需要技术支持请加vx:阿巴阿巴阿巴阿巴</span>
+    </div>       
+</div>
+<!-- 脚本区域 -->
+<script>
+    $(function(){
+        //鼠标移入添加阴影
+        $('.shabi').mouseover(function(){
+                $(this).css('box-shadow','0 0 2px 1px rgb(180 200 180)')
+        })
+        $('.shabi').mouseout(function(){
+                $(this).css('box-shadow','')
+        })
+        //鼠标移入变色
+        $('.nav li').mouseover(function(){
+                $(this).not('.icon-search').css('color','yellow')
+        })
+        $('.nav li').mouseout(function(){
+                $(this).not('.icon-search').css('color','')
+        })
+        //鼠标移入图标变暗
+        $('.main-right-a ul li').mouseover(function(){
+                $(this).css({'filter':'alpha(Opacity=80)','-moz-opacity':'0.8','opacity':'0.8'})
+        })
+        $('.main-right-a ul li').mouseout(function(){
+                $(this).css('filter','').css('-moz-opacity','').css('opacity','')
+        })
+        //鼠标移入二维码淡入淡出
+        $(".main-right-a ul li:nth-child(4)").mouseover(function(){
+                $("#erw").fadeIn(); 
+        })
+        $(".main-right-a ul li:nth-child(4)").mouseout(function(){
+                $("#erw").fadeOut(); 
+        })
+        //根据滚动距离判断定位 
+        var top = $(".box").offset().top; 
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > top){
+                    $(".box").css({ "position": "fixed", "top": 1509,"right":159 });
+                    }
+                    else {
+                    $(".box").css({ "position": "relative","top":0,"right":0 });
+                    }
+        });
+        $('.content-left-b ul li').mouseover(function(){
+                $(this).css('box-shadow','0 0 2px rgb(180 200 180)')
+        })
+        $('.content-left-b ul li').mouseout(function(){
+                $(this).css('box-shadow','')
+        })
+        // 回到顶部
+        $(window).scroll(function () { 
+            if ($(this).scrollTop() > 300) { 
+                $(".back-top img").fadeIn(500);
+            }else {$(".back-top img").fadeOut(500) 
+        } }); /*实现点击滚动回顶部*/ 
+        $(".back-top img").click(function () {
+                $("html,body").scrollTop(0); 
+        });
+        // 点击查看更多
+        $('.ca').click(function(){
+            $('.content-left-b ul').css({
+                'height':'+=905px'
+            })
+        })
+        $('.nav li:nth-child(8)').click(function(){
+            window.location.href="index.html";
+        })
+        $('.nav li:nth-child(7)').click(function(){
+            window.location.href="jsfx.html";
+        })
+        $('.nav li:nth-child(6)').click(function(){
+            window.location.href="cxrs.html";
+        })
+        $('.nav li:nth-child(5)').click(function(){
+            window.location.href="tuijian.html";
+        })
+        $('.nav li:nth-child(4)').click(function(){
+            window.location.href="about.html";
+        })
+    })
+</script>   
+<!-- 搜索框显示 -->
+<script>
+    $(function(){           
+        $(".icon-search").click(function(){
+            $('.bar').slideToggle(200);
+        })
+    })
+</script>
+</script>
+<!-- 3d滚动方块 -->
+<script>      
+    var swiper = new Swiper('.swiper-container', {
+        effect: 'cube',
+        grabCursor: true,
+        cubeEffect: {
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+        },
+        pagination: {
+        el: '.swiper-pagination',
+        },
+    });
+    </script>
+    <!-- 评论脚本 -->
+    <!-- <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script> -->
+    <script type="text/javascript" src="js/jquery.flexText.js"></script>
+    <!--textarea高度自适应-->
+    <script type="text/javascript">
+        $(function () {
+            $('.content').flexText();
+        });
+    </script>
+    <!--textarea限制字数-->
+    <script type="text/javascript">
+        function keyUP(t){
+            var len = $(t).val().length;
+            if(len > 139){
+                $(t).val($(t).val().substring(0,140));
+            }
+        }
+    </script>
+    <!--点击评论创建评论条-->
+    <script type="text/javascript">
+        $('.commentAll').on('click','.plBtn',function(){
+            var myDate = new Date();
+            //获取当前年
+            var year=myDate.getFullYear();
+            //获取当前月
+            var month=myDate.getMonth()+1;
+            //获取当前日
+            var date=myDate.getDate();
+            var h=myDate.getHours();       //获取当前小时数(0-23)
+            var m=myDate.getMinutes();     //获取当前分钟数(0-59)
+            if(m<10) m = '0' + m;
+            var s=myDate.getSeconds();
+            if(s<10) s = '0' + s;
+            var now=year+'-'+month+"-"+date+" "+h+':'+m+":"+s;
+            //获取输入内容
+            var oSize = $(this).siblings('.flex-text-wrap').find('.comment-input').val();
+            console.log(oSize);
+            //动态创建评论模块
+            oHtml = '<div class="comment-show-con clearfix"><div class="comment-show-con-img pull-left"><img src="images/header-img-comment_03.png" alt=""></div> <div class="comment-show-con-list pull-left clearfix"><div class="pl-text clearfix"> <a href="#" class="comment-size-name">卢先森 : </a> <span class="my-pl-con">&nbsp;'+ oSize +'</span> </div> <div class="date-dz"> <span class="date-dz-left pull-left comment-time">'+now+'</span> <div class="date-dz-right pull-right comment-pl-block"><a href="javascript:;" class="removeBlock">删除</a> <a href="javascript:;" class="date-dz-pl pl-hf hf-con-block pull-left">回复</a> <span class="pull-left date-dz-line">|</span> <a href="javascript:;" class="date-dz-z pull-left"><i class="date-dz-z-click-red"></i>赞 (<i class="z-num">666</i>)</a> </div> </div><div class="hf-list-con"></div></div> </div>';
+            if(oSize.replace(/(^\s*)|(\s*$)/g, "") != ''){
+                $(this).parents('.reviewArea ').siblings('.comment-show').prepend(oHtml);
+                $(this).siblings('.flex-text-wrap').find('.comment-input').prop('value','').siblings('pre').find('span').text('');
+            }
+        });
+    </script>
+    <!--点击回复动态创建回复块-->
+    <script type="text/javascript">
+        $('.comment-show').on('click','.pl-hf',function(){
+            //获取回复人的名字
+            var fhName = $(this).parents('.date-dz-right').parents('.date-dz').siblings('.pl-text').find('.comment-size-name').html();
+            //回复@
+            var fhN = '回复@'+fhName;
+            //var oInput = $(this).parents('.date-dz-right').parents('.date-dz').siblings('.hf-con');
+            var fhHtml = '<div class="hf-con pull-left"> <textarea class="content comment-input hf-input" placeholder="" onkeyup="keyUP(this)"></textarea> <a href="javascript:;" class="hf-pl">评论</a></div>';
+            //显示回复
+            if($(this).is('.hf-con-block')){
+                $(this).parents('.date-dz-right').parents('.date-dz').append(fhHtml);
+                $(this).removeClass('hf-con-block');
+                $('.content').flexText();
+                $(this).parents('.date-dz-right').siblings('.hf-con').find('.pre').css('padding','6px 15px');
+                //console.log($(this).parents('.date-dz-right').siblings('.hf-con').find('.pre'))
+                //input框自动聚焦
+                $(this).parents('.date-dz-right').siblings('.hf-con').find('.hf-input').val('').focus().val(fhN);
+            }else {
+                $(this).addClass('hf-con-block');
+                $(this).parents('.date-dz-right').siblings('.hf-con').remove();
+            }
+        });
+    </script>
+    <!--评论回复块创建-->
+    <script type="text/javascript">
+        $('.comment-show').on('click','.hf-pl',function(){
+            var oThis = $(this);
+            var myDate = new Date();
+            //获取当前年
+            var year=myDate.getFullYear();
+            //获取当前月
+            var month=myDate.getMonth()+1;
+            //获取当前日
+            var date=myDate.getDate();
+            var h=myDate.getHours();       //获取当前小时数(0-23)
+            var m=myDate.getMinutes();     //获取当前分钟数(0-59)
+            if(m<10) m = '0' + m;
+            var s=myDate.getSeconds();
+            if(s<10) s = '0' + s;
+            var now=year+'-'+month+"-"+date+" "+h+':'+m+":"+s;
+            //获取输入内容
+            var oHfVal = $(this).siblings('.flex-text-wrap').find('.hf-input').val();
+            console.log(oHfVal)
+            var oHfName = $(this).parents('.hf-con').parents('.date-dz').siblings('.pl-text').find('.comment-size-name').html();
+            var oAllVal = '回复@'+oHfName;
+            if(oHfVal.replace(/^ +| +$/g,'') == '' || oHfVal == oAllVal){
+    
+            }else {
+                $.getJSON("json/pl.json",function(data){
+                    var oAt = '';
+                    var oHf = '';
+                    $.each(data,function(n,v){
+                        delete v.hfContent;
+                        delete v.atName;
+                        var arr;
+                        var ohfNameArr;
+                        if(oHfVal.indexOf("@") == -1){
+                            data['atName'] = '';
+                            data['hfContent'] = oHfVal;
+                        }else {
+                            arr = oHfVal.split(':');
+                            ohfNameArr = arr[0].split('@');
+                            data['hfContent'] = arr[1];
+                            data['atName'] = ohfNameArr[1];
+                        }     
+                        if(data.atName == ''){
+                            oAt = data.hfContent;
+                        }else {
+                            oAt = '回复<a href="#" class="atName">@'+data.atName+'</a> : '+data.hfContent;
+                        }
+                        oHf = data.hfName;
+                    });
+    
+                    var oHtml = '<div class="all-pl-con"><div class="pl-text hfpl-text clearfix"><a href="#" class="comment-size-name">卢先森 : </a><span class="my-pl-con">'+oAt+'</span></div><div class="date-dz"> <span class="date-dz-left pull-left comment-time">'+now+'</span> <div class="date-dz-right pull-right comment-pl-block"> <a href="javascript:;" class="removeBlock">删除</a> <a href="javascript:;" class="date-dz-pl pl-hf hf-con-block pull-left">回复</a> <span class="pull-left date-dz-line">|</span> <a href="javascript:;" class="date-dz-z pull-left"><i class="date-dz-z-click-red"></i>赞 (<i class="z-num">666</i>)</a> </div> </div></div>';
+                    oThis.parents('.hf-con').parents('.comment-show-con-list').find('.hf-list-con').css('display','block').prepend(oHtml) && oThis.parents('.hf-con').siblings('.date-dz-right').find('.pl-hf').addClass('hf-con-block') && oThis.parents('.hf-con').remove();
+                });
+            }
+        });
+    </script>
+    <!--删除评论块-->
+    <script type="text/javascript">
+        $('.commentAll').on('click','.removeBlock',function(){
+            var oT = $(this).parents('.date-dz-right').parents('.date-dz').parents('.all-pl-con');
+            if(oT.siblings('.all-pl-con').length >= 1){
+                oT.remove();
+            }else {
+                $(this).parents('.date-dz-right').parents('.date-dz').parents('.all-pl-con').parents('.hf-list-con').css('display','none')
+                oT.remove();
+            }
+            $(this).parents('.date-dz-right').parents('.date-dz').parents('.comment-show-con-list').parents('.comment-show-con').remove();
+    
+        })
+    </script>
+    <!--点赞-->
+    <script type="text/javascript">
+        $('.comment-show').on('click','.date-dz-z',function(){
+            var zNum = $(this).find('.z-num').html();
+            if($(this).is('.date-dz-z-click')){
+                zNum--;
+                $(this).removeClass('date-dz-z-click red');
+                $(this).find('.z-num').html(zNum);
+                $(this).find('.date-dz-z-click-red').removeClass('red');
+            }else {
+                zNum++;
+                $(this).addClass('date-dz-z-click');
+                $(this).find('.z-num').html(zNum);
+                $(this).find('.date-dz-z-click-red').addClass('red');
+            }
+        })
+    </script>
+</body>
+</html>
